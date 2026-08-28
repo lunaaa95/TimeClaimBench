@@ -1,8 +1,8 @@
 # TimeClaimBench: A Claim-Level Benchmark for Grounded LLM Explanations of Time Series
 
-Sijia Peng<sup>&#42;</sup>, Fan Zhang<sup>&#42;</sup>, Yixi Zhou, Changlun Li, Yun Xiong, Yangyong Zhu, Xi Chen, Yanwei Yu, and Nan Tang
+Sijia Peng<sup>&#42;</sup>, Fan Zhang<sup>&#42;</sup>, Yixi Zhou, Changlun Li, Yun Xiong<sup>&dagger;</sup>, Yangyong Zhu, Xi Chen, Yanwei Yu, and Nan Tang
 
-<sup>&#42;</sup> Equal contribution.
+<sup>&#42;</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.
 
 **Accepted to Findings of the Association for Computational Linguistics: EMNLP 2026.**
 
