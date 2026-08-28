@@ -20,6 +20,8 @@ overleaf/
 annotation_app/
 annotation_space_streamlit/
 
+figs/*.pdf
+
 *.aux
 *.bbl
 *.blg

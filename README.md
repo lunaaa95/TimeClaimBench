@@ -1,8 +1,36 @@
-# TimeClaimBench Review Artifact
+# TimeClaimBench: A Claim-Level Benchmark for Grounded LLM Explanations of Time Series
 
-This is an anonymous review artifact for the paper "TimeClaimBench: A Claim-Level Benchmark for Grounded LLM Explanations of Time Series".
+Anonymous under-review repository for reproducing the core experiments and inspecting the released benchmark artifacts.
 
-The artifact focuses on reproducing the reported evaluation from saved test splits, extracted event graphs, model generations, verifier outputs, repair outputs, metric files, and paper tables. It does not include author identity files, paper source files, API caches, raw third-party downloads, or private human-audit annotation sheets.
+## Motivation
+
+LLMs can produce fluent time-series explanations that still contain unsupported temporal claims, wrong intervals, or hallucinated patterns. TimeClaimBench evaluates explanations at the claim level: each generated claim is parsed, matched against temporal evidence, and assigned a support verdict.
+
+![Motivation figure](figs/motivation.png)
+
+## Pipeline
+
+TimeClaimBench turns each time series into an event graph, asks LLMs to generate explanations under several prompting conditions, verifies every extracted claim against temporal evidence, and applies verifier-guided repair to remove or correct unsupported claims.
+
+![Pipeline figure](figs/pipeline.png)
+
+## Key Results
+
+- Event-grounded prompting gives the strongest synthetic faithfulness: `0.676` vs. `0.493` for direct prompting, and reduces unsupported claims from `0.392` to `0.113`.
+- Verifier-guided repair improves aggregate faithfulness from `0.704` to `0.991`, while reducing unsupported claims from `0.138` to `0.006`.
+- Event-graph verification is substantially stronger than type-only checking: Macro-F1 `0.733` vs. `0.456`.
+- Real-NAB diagnostics show high anomaly-window localization hit rate (`0.960`), while claim-level support remains harder in real-world data.
+
+## What Is Included
+
+- `src/tsr/`: claim parsing, event extraction, event graphs, verification, repair, metrics, prompts, and provider wrappers.
+- `scripts/`: commands for generation, verification, repair, table building, and diagnostics.
+- `data/synthetic/`: released train/dev/test splits and the 80-example pilot subset.
+- `data/processed/`: extracted event graphs and diagnostic event graphs.
+- `data/real/nab_windows.jsonl`: processed Real-NAB diagnostic windows.
+- `outputs/predictions/`, `outputs/analysis/`, `outputs/tables/`, `outputs/verification_baselines/`: saved generations, verifier outputs, repairs, metrics, aggregate analyses, and generated tables.
+
+This repository intentionally excludes author identity files, paper source files, raw API caches, raw third-party downloads, private annotation sheets, annotation apps, and synthetic data construction utilities.
 
 ## Setup
 
@@ -23,7 +51,7 @@ If `pytest` is unavailable:
 PYTHONPATH=src python3 -m unittest discover -s tests
 ```
 
-## Main Reproducibility Commands
+## Reproduce Saved Results
 
 Recompute verification, verifier-guided repair, metrics, and the summary CSV from saved full synthetic generations:
 
@@ -34,7 +62,7 @@ PYTHONPATH=src python3 scripts/recompute_metrics_from_generations.py \
   --config configs/verifier.yaml
 ```
 
-Regenerate the main result tables from metric files:
+Regenerate the main result tables and diagnostics:
 
 ```bash
 PYTHONPATH=src python3 scripts/make_tables.py
@@ -45,30 +73,24 @@ PYTHONPATH=src python3 scripts/make_mismatched_event_table.py
 PYTHONPATH=src python3 scripts/analyze_real_nab_results.py
 ```
 
-Bootstrap and verifier-human calibration outputs reported in the paper are included under `outputs/analysis/` and `outputs/tables/`. Re-running the combined calibration script requires private audit CSV files, which are intentionally excluded from this anonymous review artifact.
-
-Run no-key local generation smoke tests with the dummy provider:
+Run a no-key smoke test with the dummy provider:
 
 ```bash
-PYTHONPATH=src python3 scripts/run_llm_generation.py --config configs/experiment.yaml --provider dummy --prompt event_grounded
+PYTHONPATH=src python3 scripts/run_llm_generation.py \
+  --config configs/experiment.yaml \
+  --provider dummy \
+  --prompt event_grounded
 ```
 
-Real provider calls are optional and read credentials only from environment variables such as `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `GEMINI_API_KEY`, or `GOOGLE_API_KEY`. No API keys are stored in this repository.
+## Running New LLM Calls
 
-## Included
+The saved outputs can be inspected without any API credentials. To rerun live provider calls, configure your own API keys as environment variables before running generation scripts:
 
-- `src/tsr/`: claim parsing, event extraction/graphs, verification, repair, metrics, prompt templates, and provider wrappers.
-- `scripts/`: evaluation, verification, repair, table generation, and diagnostic scripts used for reported results.
-- `data/synthetic/*.jsonl`: released review synthetic splits, including train/dev/test and the 80-example pilot subset.
-- `data/processed/*.jsonl`: extracted and diagnostic event graphs.
-- `data/real/nab_windows.jsonl`: processed Real-NAB localization diagnostic windows.
-- `outputs/predictions/`: saved generations, verifier outputs, repair outputs, and metric summaries for the reported experiments.
-- `outputs/analysis/`, `outputs/tables/`, and `outputs/verification_baselines/`: aggregate analysis files and generated tables.
+```bash
+export OPENAI_API_KEY="your-key"
+export ANTHROPIC_API_KEY="your-key"
+export DEEPSEEK_API_KEY="your-key"
+export GEMINI_API_KEY="your-key"
+```
 
-## Not Included
-
-- Author names, affiliations, emails, paper LaTeX source, submitted PDF, Overleaf metadata, and local build logs.
-- Raw API cache files under `outputs/cache`.
-- Raw NAB downloads under `data/raw`.
-- Private human-audit annotation files and annotation apps.
-- Synthetic data construction utilities, which are not required to recompute the reported test-set metrics in this review artifact.
+The code reads keys only from environment variables. No API keys are stored in this repository.
