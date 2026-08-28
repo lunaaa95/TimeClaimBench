@@ -1,0 +1,7 @@
+comparison,row_label,column_supported,column_partial,column_unsupported
+annotator_1_vs_annotator_2,supported,65,6,2
+annotator_1_vs_annotator_2,partial,2,6,2
+annotator_1_vs_annotator_2,unsupported,1,1,5
+human_consensus_vs_verifier,supported,23,23,19
+human_consensus_vs_verifier,partial,1,1,4
+human_consensus_vs_verifier,unsupported,2,1,2

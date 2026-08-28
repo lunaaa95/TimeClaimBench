@@ -1,0 +1,67 @@
+{
+  "definition": "Exact event type and interval IoU >= 0.5.",
+  "n_series": 400,
+  "n_recovered": 394,
+  "micro_recall": 0.985,
+  "macro_recall": 0.9849999999999999,
+  "macro_mean_best_iou": 0.8589728715564277,
+  "per_event_type": [
+    {
+      "event_type": "anomaly",
+      "n_gold": 50,
+      "recovered": 50,
+      "recall_at_iou_0_5": 1.0,
+      "mean_best_iou": 1.0
+    },
+    {
+      "event_type": "change_point",
+      "n_gold": 50,
+      "recovered": 50,
+      "recall_at_iou_0_5": 1.0,
+      "mean_best_iou": 1.0
+    },
+    {
+      "event_type": "downward_trend",
+      "n_gold": 50,
+      "recovered": 47,
+      "recall_at_iou_0_5": 0.94,
+      "mean_best_iou": 0.7306905773904081
+    },
+    {
+      "event_type": "seasonality",
+      "n_gold": 50,
+      "recovered": 50,
+      "recall_at_iou_0_5": 1.0,
+      "mean_best_iou": 1.0
+    },
+    {
+      "event_type": "sharp_drop",
+      "n_gold": 50,
+      "recovered": 50,
+      "recall_at_iou_0_5": 1.0,
+      "mean_best_iou": 0.7433333333333334
+    },
+    {
+      "event_type": "sharp_rise",
+      "n_gold": 50,
+      "recovered": 50,
+      "recall_at_iou_0_5": 1.0,
+      "mean_best_iou": 0.7433333333333336
+    },
+    {
+      "event_type": "upward_trend",
+      "n_gold": 50,
+      "recovered": 48,
+      "recall_at_iou_0_5": 0.96,
+      "mean_best_iou": 0.7197196045366564
+    },
+    {
+      "event_type": "volatility_shift",
+      "n_gold": 50,
+      "recovered": 49,
+      "recall_at_iou_0_5": 0.98,
+      "mean_best_iou": 0.9347061238576895
+    }
+  ],
+  "precision_constraint": "Each synthetic series labels one designed primary event, while the extractor may detect additional valid local events; unmatched extracted events are therefore not identifiable false positives."
+}

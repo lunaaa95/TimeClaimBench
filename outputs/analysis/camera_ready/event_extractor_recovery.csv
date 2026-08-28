@@ -1,0 +1,9 @@
+event_type,n_gold,recovered,recall_at_iou_0_5,mean_best_iou
+anomaly,50,50,1.0,1.0
+change_point,50,50,1.0,1.0
+downward_trend,50,47,0.94,0.7306905773904081
+seasonality,50,50,1.0,1.0
+sharp_drop,50,50,1.0,0.7433333333333334
+sharp_rise,50,50,1.0,0.7433333333333336
+upward_trend,50,48,0.96,0.7197196045366564
+volatility_shift,50,49,0.98,0.9347061238576895

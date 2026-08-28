@@ -1,0 +1,17 @@
+comparison,baseline,pattern,n_series,n_annotations,mean_rating_delta_faithfulness,mean_rating_delta_informativeness,event_grounded_win_count_overall,baseline_win_count_overall,tie_count_overall
+event_grounded_vs_cot,cot,anomaly,5,10,-1.1,-1.2,0,10,0
+event_grounded_vs_cot,cot,change_point,5,10,-2.9,-2.3,0,10,0
+event_grounded_vs_cot,cot,downward_trend,5,10,-2.2,-1.8,0,10,0
+event_grounded_vs_cot,cot,seasonality,5,10,-1.7,-1.1,2,7,1
+event_grounded_vs_cot,cot,sharp_drop,5,10,-2.7,-1.7,0,10,0
+event_grounded_vs_cot,cot,sharp_rise,5,10,-2.4,-1.4,0,10,0
+event_grounded_vs_cot,cot,upward_trend,5,10,-2.4,-1.5,0,10,0
+event_grounded_vs_cot,cot,volatility_shift,5,10,-0.6,-1.2,1,8,1
+event_grounded_vs_direct,direct,anomaly,5,10,-1.6,-0.8,0,10,0
+event_grounded_vs_direct,direct,change_point,5,10,-2.9,-1.3,0,10,0
+event_grounded_vs_direct,direct,downward_trend,5,10,-2.6,-1.2,0,10,0
+event_grounded_vs_direct,direct,seasonality,5,10,-0.9,-0.4,0,6,4
+event_grounded_vs_direct,direct,sharp_drop,5,10,-2.5,-1.0,0,10,0
+event_grounded_vs_direct,direct,sharp_rise,5,10,-2.2,-1.1,0,10,0
+event_grounded_vs_direct,direct,upward_trend,5,10,-2.4,-1.3,0,9,1
+event_grounded_vs_direct,direct,volatility_shift,5,10,-0.4,-0.1,2,5,3

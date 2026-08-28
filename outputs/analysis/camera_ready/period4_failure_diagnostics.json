@@ -1,0 +1,45 @@
+{
+  "period_4_text_diagnostic": {
+    "n_unique_series": 40,
+    "event_grounded_answers_asserting_period_4": 25,
+    "event_grounded_answers_asserting_seasonality": 30,
+    "period_4_count_by_designed_pattern": {
+      "anomaly": 0,
+      "change_point": 5,
+      "downward_trend": 5,
+      "seasonality": 0,
+      "sharp_drop": 5,
+      "sharp_rise": 5,
+      "upward_trend": 5,
+      "volatility_shift": 0
+    },
+    "constraint": "These are deterministic text counts on the sampled outputs, not an independently adjudicated error rate."
+  },
+  "consensus_supported_but_operationally_non_supported": {
+    "n": 42,
+    "stored_verifier_error_code_counts": {
+      "interval_mislocalization": 23,
+      "pattern_confusion": 11,
+      "pattern_hallucination": 4,
+      "direction_error": 4
+    },
+    "constraint": "The categories are verifier-stored diagnostic codes, not independently adjudicated causal labels."
+  },
+  "representative_pipeline_traces": [
+    {
+      "case_id": "CRV091",
+      "finding": "Both annotators supported an absence-of-seasonality claim, while the operational verifier returned unsupported because the parser represented it as a positive seasonality claim without negative polarity.",
+      "implication": "Polarity-aware absence handling is required; threshold tuning alone cannot correct this parser-verifier failure."
+    },
+    {
+      "case_id": "HP025",
+      "series_id": "test_000137",
+      "designed_event": "sharp_drop [43,46]",
+      "extracted_graph_diagnostic": "The graph also contains a full-range downward trend and a period-4 seasonality event.",
+      "operational_verifier_trace": "The event-grounded period-4 claim matches graph event E2 and receives supported with score 1.0.",
+      "human_result": "Whole-explanation preference favors Direct and CoT for this item.",
+      "implication": "Grounding can increase consistency with the supplied representation while introducing representation-linked claims that holistic raters do not prefer."
+    }
+  ],
+  "release_note": "The traces are deidentified summaries. No raw annotation rows, randomization keys, candidate packets, or annotator notes are included."
+}

@@ -1,0 +1,99 @@
+{
+  "source": {
+    "synthetic": "data/synthetic/test.jsonl",
+    "real": "data/real/nab_windows.jsonl"
+  },
+  "n_synthetic": 400,
+  "n_real": 200,
+  "n_real_anomaly": 100,
+  "n_real_normal": 100,
+  "feature_definition": "All features are computed after per-window z-normalization.",
+  "coverage_definition": "Real value lies within the synthetic 5th-95th percentile interval.",
+  "mean_feature_coverage": 0.845625,
+  "median_feature_coverage": 0.845,
+  "mean_real_window_feature_fraction_covered": 0.845625,
+  "real_windows_with_at_least_6_of_8_features_covered": 0.795,
+  "features": [
+    {
+      "feature": "abs_trend_slope",
+      "synthetic_q05": 0.028091420721207353,
+      "synthetic_median": 0.398475725931404,
+      "synthetic_q95": 1.4426253654342307,
+      "real_median": 0.2408344937742525,
+      "real_coverage": 0.835,
+      "anomaly_coverage": 0.8,
+      "normal_coverage": 0.87
+    },
+    {
+      "feature": "lag1_autocorrelation",
+      "synthetic_q05": -0.0994161426445724,
+      "synthetic_median": 0.8682871777844949,
+      "synthetic_q95": 0.9462067006593657,
+      "real_median": 0.40733107305480876,
+      "real_coverage": 0.82,
+      "anomaly_coverage": 0.82,
+      "normal_coverage": 0.82
+    },
+    {
+      "feature": "difference_std",
+      "synthetic_q05": 0.32628461679233833,
+      "synthetic_median": 0.5126556195331178,
+      "synthetic_q95": 1.4890183145617175,
+      "real_median": 1.0466611024014982,
+      "real_coverage": 0.79,
+      "anomaly_coverage": 0.79,
+      "normal_coverage": 0.79
+    },
+    {
+      "feature": "max_abs_step",
+      "synthetic_q05": 1.6323057824823306,
+      "synthetic_median": 2.844590119821164,
+      "synthetic_q95": 7.835388943645073,
+      "real_median": 3.680083965785994,
+      "real_coverage": 0.78,
+      "anomaly_coverage": 0.74,
+      "normal_coverage": 0.82
+    },
+    {
+      "feature": "spectral_entropy",
+      "synthetic_q05": 0.1541799568383012,
+      "synthetic_median": 0.4279889182584923,
+      "synthetic_q95": 0.9452953159991868,
+      "real_median": 0.7636988372993607,
+      "real_coverage": 0.895,
+      "anomaly_coverage": 0.86,
+      "normal_coverage": 0.93
+    },
+    {
+      "feature": "peak_abs_z",
+      "synthetic_q05": 1.5618518065007048,
+      "synthetic_median": 2.60528439959241,
+      "synthetic_q95": 7.635164985149315,
+      "real_median": 3.589165835830832,
+      "real_coverage": 0.885,
+      "anomaly_coverage": 0.83,
+      "normal_coverage": 0.94
+    },
+    {
+      "feature": "standardized_range",
+      "synthetic_q05": 2.7989853303443506,
+      "synthetic_median": 4.069934046850232,
+      "synthetic_q95": 8.946666394126046,
+      "real_median": 4.866217997879167,
+      "real_coverage": 0.905,
+      "anomaly_coverage": 0.88,
+      "normal_coverage": 0.93
+    },
+    {
+      "feature": "log_volatility_ratio",
+      "synthetic_q05": 0.706610121387085,
+      "synthetic_median": 1.225309200703566,
+      "synthetic_q95": 2.0944147153749433,
+      "real_median": 0.8706913083926131,
+      "real_coverage": 0.855,
+      "anomaly_coverage": 0.81,
+      "normal_coverage": 0.9
+    }
+  ],
+  "interpretation_constraint": "This is a scale-invariant shape-coverage diagnostic, not evidence that synthetic windows reproduce the full real-data distribution."
+}

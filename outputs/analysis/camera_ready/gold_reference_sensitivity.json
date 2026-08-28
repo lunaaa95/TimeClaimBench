@@ -1,0 +1,110 @@
+{
+  "source": "8,000 saved generation records; no new model calls",
+  "all_claim_tau_extracted_vs_gold": -0.3333333333333333,
+  "gold_type_tau_extracted_vs_gold": 1.0,
+  "prompt_order_extracted_all": [
+    "event_grounded",
+    "direct",
+    "cot",
+    "structured"
+  ],
+  "prompt_order_gold_all": [
+    "direct",
+    "structured",
+    "cot",
+    "event_grounded"
+  ],
+  "prompt_order_extracted_gold_type": [
+    "cot",
+    "direct",
+    "structured",
+    "event_grounded"
+  ],
+  "prompt_order_gold_gold_type": [
+    "cot",
+    "direct",
+    "structured",
+    "event_grounded"
+  ],
+  "bootstrap_event_grounded_vs_direct": [
+    {
+      "panel": "all",
+      "metric": "faithfulness",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": -0.055952348504793394,
+      "ci_low": -0.06238267956732727,
+      "ci_high": -0.04944570639521547,
+      "p_value": 0.0
+    },
+    {
+      "panel": "all",
+      "metric": "unsupported",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": 0.031032507467222213,
+      "ci_low": 0.02323112392021461,
+      "ci_high": 0.038941868885273845,
+      "p_value": 0.0
+    },
+    {
+      "panel": "all",
+      "metric": "grounded",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": -0.031032507467222213,
+      "ci_low": -0.038557988062081626,
+      "ci_high": -0.023234695031695413,
+      "p_value": 0.0
+    },
+    {
+      "panel": "gold_type",
+      "metric": "faithfulness",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": -0.228632873586773,
+      "ci_low": -0.2522305473551029,
+      "ci_high": -0.20472107564779585,
+      "p_value": 0.0
+    },
+    {
+      "panel": "gold_type",
+      "metric": "unsupported",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": -0.014373024799134191,
+      "ci_low": -0.019360814351649897,
+      "ci_high": -0.009695456080403798,
+      "p_value": 0.0
+    },
+    {
+      "panel": "gold_type",
+      "metric": "grounded",
+      "treatment": "event_grounded",
+      "baseline": "direct",
+      "n_models": 5,
+      "n_bootstrap": 5000,
+      "seed": 2680,
+      "delta": 0.014373024799134205,
+      "ci_low": 0.00974285761694146,
+      "ci_high": 0.01949839397967133,
+      "p_value": 0.0
+    }
+  ],
+  "interpretation_constraint": "Synthetic gold graphs contain designed reference events, not exhaustive local evidence; gold-type restriction only removes claims whose parsed type cannot match a gold event."
+}

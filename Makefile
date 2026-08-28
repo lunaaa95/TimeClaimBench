@@ -1,4 +1,4 @@
-.PHONY: test recompute-full tables diagnostics smoke
+.PHONY: test recompute-full tables diagnostics camera-ready-diagnostics validate-diagnostics smoke
 
 export PYTHONPATH := src
 
@@ -17,6 +17,15 @@ diagnostics:
 	python3 scripts/make_event_source_ablation_table.py
 	python3 scripts/make_mismatched_event_table.py
 	python3 scripts/analyze_real_nab_results.py
+
+camera-ready-diagnostics:
+	python3 scripts/camera_ready/analyze_event_extractor_recovery.py
+	python3 scripts/camera_ready/analyze_synthetic_real_shape_coverage.py
+	python3 scripts/camera_ready/analyze_gold_reference_sensitivity.py
+	python3 scripts/camera_ready/validate_aggregate_diagnostics.py
+
+validate-diagnostics:
+	python3 scripts/camera_ready/validate_aggregate_diagnostics.py
 
 smoke:
 	python3 scripts/run_llm_generation.py --config configs/experiment.yaml --provider dummy --prompt event_grounded

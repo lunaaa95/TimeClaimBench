@@ -1,0 +1,72 @@
+{
+  "design": {
+    "n_claims": 90,
+    "n_annotators": 2,
+    "prompt_counts": {
+      "direct": 30,
+      "cot": 30,
+      "event_grounded": 30
+    },
+    "verifier_label_counts": {
+      "supported": 30,
+      "partial": 30,
+      "unsupported": 30
+    },
+    "sampling_constraint": "The audit is stratified by prompt and verifier label. It diagnoses calibration and agreement, not natural-corpus label prevalence."
+  },
+  "human_human": {
+    "n": 90,
+    "n_exact": 76,
+    "exact_agreement": 0.8444444444444444,
+    "cohen_kappa": 0.5718654434250765,
+    "binary_supported_vs_non_supported_exact_agreement": 0.8777777777777778,
+    "binary_supported_vs_non_supported_cohen_kappa": 0.6415640839971036,
+    "annotator_1_label_counts": {
+      "supported": 73,
+      "partial": 10,
+      "unsupported": 7
+    },
+    "annotator_2_label_counts": {
+      "supported": 68,
+      "partial": 13,
+      "unsupported": 9
+    }
+  },
+  "exact_consensus": {
+    "n": 76,
+    "n_disagreements": 14,
+    "label_counts": {
+      "supported": 65,
+      "partial": 6,
+      "unsupported": 5
+    }
+  },
+  "verifier_vs_exact_consensus": {
+    "n": 76,
+    "n_exact": 26,
+    "exact_agreement": 0.34210526315789475,
+    "cohen_kappa": 0.0028863815271582193,
+    "macro_f1": 0.23444798928669894,
+    "confusion_orientation": "Rows are human consensus labels and columns are verifier labels, both ordered supported, partial, unsupported.",
+    "confusion_matrix": [
+      [23, 23, 19],
+      [1, 1, 4],
+      [2, 1, 2]
+    ],
+    "human_supported_rate_by_verifier_label": {
+      "supported": {
+        "n": 26,
+        "rate": 0.8846153846153846
+      },
+      "partial": {
+        "n": 25,
+        "rate": 0.92
+      },
+      "unsupported": {
+        "n": 25,
+        "rate": 0.76
+      }
+    }
+  },
+  "release_note": "Only aggregate counts are released. Raw annotation sheets, free-text notes, and the randomization key are excluded."
+}
