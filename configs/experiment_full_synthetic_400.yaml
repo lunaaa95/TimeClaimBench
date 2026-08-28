@@ -1,0 +1,23 @@
+seed: 42
+input_path: data/synthetic/test.jsonl
+graph_path: data/processed/test_graphs.jsonl
+output_dir: outputs/predictions/full_synthetic_400
+models:
+  - name: gpt-5.4-mini
+    provider: openai
+  - name: gpt-4.1-mini
+    provider: openai
+  - name: deepseek-v4-flash
+    provider: deepseek
+  - name: gemini-3-flash-preview
+    provider: gemini
+  - name: claude-sonnet-4-5-20250929
+    provider: anthropic
+prompts:
+  - direct
+  - cot
+  - structured
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 5
+cost_config: configs/model_costs.yaml

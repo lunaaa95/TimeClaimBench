@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/event_verbalizer/deterministic__event-verbalizer__event_grounded_generation.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.936137414666373,
+    "unsupported_claim_rate": 0.040079277692138295,
+    "partial_support_rate": 0.023783307641488657,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 4541.0,
+    "claims_per_explanation": 11.3525
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.936137414666373,
+    "unsupported_claim_rate": 0.040079277692138295,
+    "partial_support_rate": 0.023783307641488657,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 4541.0,
+    "claims_per_explanation": 11.3525
+  },
+  "claim_retention_rate": 1.0,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 0.0,
+    "cost_per_explanation_usd": 0.0,
+    "input_tokens": 0.0,
+    "output_tokens": 0.0,
+    "total_tokens": 0.0,
+    "tokens_per_explanation": 0.0
+  }
+}

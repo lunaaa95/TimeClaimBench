@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{0.14\textwidth}p{0.15\textwidth}p{0.13\textwidth}p{0.32\textwidth}p{0.20\textwidth}@{}}
+\toprule
+Failure mode & Run & Series & Problematic claim & Verifier diagnosis \\
+\midrule
+Unsupported pattern & GPT-4.1-mini / Direct & test\_000003; Upward trend & Around the 50th point, there is a sharp and significant drop from approximately 109 down to near 100, indicating a major change point or anomaly. & unsupported (pattern\_confusion). The model introduces an anomaly/change-point narrative not supported by the event graph. \\
+Interval mislocalization & DeepSeek-V4-Flash / Event-grounded & test\_000002; Upward trend & A moderate downward trend follows from index 20 to 60, overlapping with the later part of the upward trend and continuing after it. & partial (interval\_mislocalization). The claim identifies the right phenomenon but grounds it to a narrower or shifted span. \\
+Causal hallucination & GPT-4.1-mini / CoT & test\_000032; Upward trend & The major temporal pattern is thus a mid-series growth phase culminating in a peak, abruptly interrupted by a significant drop, suggesting a possible external shock or regime change... & unsupported (pattern\_confusion). CoT turns a descriptive temporal change into an external-cause explanation. \\
+\bottomrule
+\end{tabular}
+\caption{Representative claim-level failure cases selected from the full synthetic verification outputs. The cases illustrate unsupported pattern introduction, interval mislocalization, and causal over-interpretation.}
+\label{tab:error-cases}
+\end{table*}

@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Verifier & Macro-F1 & Sup. F1 & Part. F1 & Unsup. F1 & IoU \\
+\midrule
+Majority unsupported & 0.222 & 0.000 & 0.000 & 0.667 & 0.000 \\
+Type-only & 0.456 & 0.552 & 0.000 & 0.817 & 0.531 \\
+Type+direction & 0.456 & 0.552 & 0.000 & 0.815 & 0.531 \\
+Type+interval & 0.733 & 0.819 & 0.564 & 0.817 & 0.604 \\
+Event graph (no interval) & 0.458 & 0.552 & 0.005 & 0.817 & 0.537 \\
+Event graph & 0.733 & 0.819 & 0.564 & 0.817 & 0.601 \\
+Gold-event oracle & 0.884 & 0.856 & 0.797 & 1.000 & 0.651 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Verifier baseline and ablation results on 1,600 synthetic claim-level cases derived from the 400-example test split. The benchmark contains one supported claim, one interval-mislocalized partial claim, and two unsupported claims per series. IoU is computed for supported and partial cases with predicted support intervals.}
+\label{tab:verification}
+\end{table}

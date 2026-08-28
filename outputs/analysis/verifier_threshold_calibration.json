@@ -1,0 +1,47 @@
+{
+  "best_in_sample": {
+    "binary_exact": 0.4423076923076923,
+    "binary_kappa": 0.028350515463917647,
+    "binary_non_supported_f1": 0.33587786259541985,
+    "config": "sup=0.75,part=0.25,iou=0.30",
+    "exact": 0.4166666666666667,
+    "interval_iou_threshold": 0.3,
+    "kappa": 0.09383378016085797,
+    "macro_f1": 0.3571872803101859,
+    "partial_threshold": 0.25,
+    "supported_threshold": 0.75
+  },
+  "cv_calibrated": {
+    "binary_exact": 0.4166666666666667,
+    "binary_kappa": -0.003392705682782271,
+    "binary_non_supported_f1": 0.3157894736842105,
+    "exact": 0.391025641025641,
+    "kappa": 0.06616257088846877,
+    "macro_f1": 0.33530194200585256
+  },
+  "label_distribution": {
+    "partial": 12,
+    "supported": 123,
+    "unsupported": 21
+  },
+  "n_consensus": 156,
+  "original": {
+    "binary_exact": 0.4358974358974359,
+    "binary_kappa": 0.023474178403755874,
+    "binary_non_supported_f1": 0.3333333333333333,
+    "config": "sup=0.75,part=0.45,iou=0.50",
+    "exact": 0.41025641025641024,
+    "interval_iou_threshold": 0.5,
+    "kappa": 0.09032135386955698,
+    "macro_f1": 0.3532380683615964,
+    "partial_threshold": 0.45,
+    "supported_threshold": 0.75
+  },
+  "selected_threshold_counts": {
+    "sup=0.70,part=0.45,iou=0.30": 1,
+    "sup=0.80,part=0.45,iou=0.30": 1,
+    "sup=0.80,part=0.55,iou=0.30": 1,
+    "sup=0.80,part=0.65,iou=0.30": 1,
+    "sup=0.85,part=0.45,iou=0.30": 1
+  }
+}

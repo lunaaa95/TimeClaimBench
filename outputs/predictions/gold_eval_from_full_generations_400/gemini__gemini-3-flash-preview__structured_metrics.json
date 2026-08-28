@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/gold_eval_from_full_generations_400/gemini__gemini-3-flash-preview__structured_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.09054690329590728,
+    "unsupported_claim_rate": 0.8678015211879754,
+    "partial_support_rate": 0.041651575516117346,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 2761.0,
+    "claims_per_explanation": 6.9025
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9238476953907816,
+    "unsupported_claim_rate": 0.07615230460921844,
+    "partial_support_rate": 0.0,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 499.0,
+    "claims_per_explanation": 1.2475
+  },
+  "claim_retention_rate": 0.18073161897863094,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 1.7646184999999996,
+    "cost_per_explanation_usd": 0.004411546249999999,
+    "input_tokens": 383923.0,
+    "output_tokens": 524219.0,
+    "total_tokens": 908142.0,
+    "tokens_per_explanation": 2270.355
+  }
+}

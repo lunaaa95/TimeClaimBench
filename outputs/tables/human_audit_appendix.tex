@@ -1,0 +1,66 @@
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Source & N & Supported & Partial & Unsupported \\
+\midrule
+Annotator A & 180 & 131 & 20 & 29 \\
+Annotator B & 180 & 136 & 20 & 24 \\
+Consensus gold & 156 & 123 & 12 & 21 \\
+Verifier sample & 180 & 60 & 60 & 60 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Label distributions in the calibrated 180-claim human audit. Consensus gold contains only the 156 claims on which the two annotators agree.}
+\label{tab:human-audit-label-distribution}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+Annotator A label & B supported & B partial & B unsupported \\
+\midrule
+supported & 123 & 6 & 2 \\
+partial & 7 & 12 & 1 \\
+unsupported & 6 & 2 & 21 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Human-human confusion matrix for the two calibrated annotators. Rows are Annotator A labels and columns are Annotator B labels.}
+\label{tab:human-human-confusion}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+Reference & True label & Verifier supported & Verifier partial & Verifier unsupported \\
+\midrule
+\multirow{3}{*}{Consensus gold}
+& supported & 46 & 47 & 30 \\
+& partial & 2 & 9 & 1 \\
+& unsupported & 9 & 3 & 9 \\
+\midrule
+\multirow{3}{*}{Annotator A}
+& supported & 48 & 48 & 35 \\
+& partial & 3 & 9 & 8 \\
+& unsupported & 9 & 3 & 17 \\
+\midrule
+\multirow{3}{*}{Annotator B}
+& supported & 47 & 47 & 42 \\
+& partial & 4 & 10 & 6 \\
+& unsupported & 9 & 3 & 12 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Verifier-human confusion matrices grouped by reference label source. Rows are human or consensus labels, and columns are verifier labels. Consensus gold uses the 156 human-agreement cases; Annotator A and Annotator B use all 180 claims.}
+\label{tab:verifier-human-confusion}
+\end{table}

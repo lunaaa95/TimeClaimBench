@@ -1,0 +1,34 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrr}
+\toprule
+Model & Prompt & Partial Before & Chron. Viol. & Claims/Expl. After & Semantic Pres. & Total Cost & Tokens/Expl. \\
+\midrule
+Claude Sonnet 4.5 & direct & 0.054 & 0.002 & 3.92 & 0.571 & \$0.5433 & 899.0 \\
+Claude Sonnet 4.5 & cot & 0.064 & 0.000 & 4.59 & 0.571 & \$0.8023 & 1114.0 \\
+Claude Sonnet 4.5 & structured & 0.154 & 0.000 & 2.38 & 0.399 & \$0.4706 & 823.3 \\
+Claude Sonnet 4.5 & event-grounded & 0.176 & 0.000 & 6.31 & 0.990 & \$0.8795 & 2253.1 \\
+DeepSeek-V4-Flash & direct & 0.185 & 0.000 & 3.64 & 1.000 & \$0.0418 & 2139.1 \\
+DeepSeek-V4-Flash & cot & 0.109 & 0.000 & 7.58 & 0.970 & \$0.0724 & 3500.3 \\
+DeepSeek-V4-Flash & structured & 0.166 & 0.000 & 2.80 & 1.000 & \$0.0516 & 2566.4 \\
+DeepSeek-V4-Flash & event-grounded & 0.201 & 0.000 & 7.60 & 1.000 & \$0.0347 & 2496.9 \\
+Gemini-3-Flash & direct & 0.143 & 0.001 & 5.44 & 0.950 & \$0.2995 & 2061.8 \\
+Gemini-3-Flash & cot & 0.072 & 0.002 & 7.81 & 0.983 & \$0.3763 & 2381.1 \\
+Gemini-3-Flash & structured & 0.192 & 0.000 & 3.64 & 1.000 & \$0.3535 & 2273.4 \\
+Gemini-3-Flash & event-grounded & 0.267 & 0.000 & 6.44 & 1.000 & \$0.4374 & 4090.8 \\
+OpenAI GPT-4.1-mini & direct & 0.051 & 0.000 & 3.91 & 1.000 & \$0.0344 & 677.7 \\
+OpenAI GPT-4.1-mini & cot & 0.100 & 0.000 & 9.95 & 0.966 & \$0.0832 & 1055.7 \\
+OpenAI GPT-4.1-mini & structured & 0.193 & 0.000 & 3.06 & 1.000 & \$0.0399 & 708.4 \\
+OpenAI GPT-4.1-mini & event-grounded & 0.233 & 0.000 & 8.09 & 1.000 & \$0.1096 & 2259.3 \\
+OpenAI GPT-5.4-mini & direct & 0.100 & 0.000 & 5.11 & 0.931 & \$0.1216 & 791.1 \\
+OpenAI GPT-5.4-mini & cot & 0.065 & 0.000 & 7.61 & 0.893 & \$0.2124 & 1039.8 \\
+OpenAI GPT-5.4-mini & structured & 0.197 & 0.000 & 3.10 & 1.000 & \$0.1215 & 777.5 \\
+OpenAI GPT-5.4-mini & event-grounded & 0.216 & 0.000 & 6.53 & 1.000 & \$0.2073 & 2134.1 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Additional multi-provider pilot diagnostics. Semantic preservation is implemented as supported-claim preservation: an originally supported claim is counted as preserved when the repaired explanation contains a supported claim grounded by an overlapping support event. Total cost is measured over the 80 examples in each model--prompt run.}
+\label{tab:pilot-appendix}
+\end{table*}

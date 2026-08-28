@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/gold_eval_from_full_generations_400/anthropic__claude-sonnet-4-5-20250929__cot_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.08330277920363717,
+    "unsupported_claim_rate": 0.9019579086309305,
+    "partial_support_rate": 0.01473931216543228,
+    "chronology_violation_rate": 0.0004399794676248442,
+    "n_claims": 13637.0,
+    "claims_per_explanation": 34.0925
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9381153305203939,
+    "unsupported_claim_rate": 0.06188466947960619,
+    "partial_support_rate": 0.0,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 711.0,
+    "claims_per_explanation": 1.7775
+  },
+  "claim_retention_rate": 0.052137566913544035,
+  "supported_claim_preservation": 0.9850352112676056,
+  "cost": {
+    "generation_cost_usd": 3.965229,
+    "cost_per_explanation_usd": 0.0099130725,
+    "input_tokens": 222768.0,
+    "output_tokens": 219795.0,
+    "total_tokens": 442563.0,
+    "tokens_per_explanation": 1106.4075
+  }
+}

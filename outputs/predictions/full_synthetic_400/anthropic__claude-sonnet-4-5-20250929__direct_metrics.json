@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/full_synthetic_400/anthropic__claude-sonnet-4-5-20250929__direct_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.4010900532639663,
+    "unsupported_claim_rate": 0.5419298897559767,
+    "partial_support_rate": 0.05698005698005698,
+    "chronology_violation_rate": 0.0013625665799578844,
+    "n_claims": 8073.0,
+    "claims_per_explanation": 20.1825
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.8983818770226537,
+    "unsupported_claim_rate": 0.041423948220064725,
+    "partial_support_rate": 0.06019417475728155,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 1545.0,
+    "claims_per_explanation": 3.8625
+  },
+  "claim_retention_rate": 0.1913786696395392,
+  "supported_claim_preservation": 0.5568252007411982,
+  "cost": {
+    "generation_cost_usd": 2.6974590000000007,
+    "cost_per_explanation_usd": 0.006743647500000002,
+    "input_tokens": 223168.0,
+    "output_tokens": 135197.0,
+    "total_tokens": 358365.0,
+    "tokens_per_explanation": 895.9125
+  }
+}

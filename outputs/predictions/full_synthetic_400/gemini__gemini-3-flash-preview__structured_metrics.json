@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/full_synthetic_400/gemini__gemini-3-flash-preview__structured_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.3679826149945672,
+    "unsupported_claim_rate": 0.4480260775081492,
+    "partial_support_rate": 0.1839913074972836,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 2761.0,
+    "claims_per_explanation": 6.9025
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9598930481283422,
+    "unsupported_claim_rate": 0.02807486631016043,
+    "partial_support_rate": 0.012032085561497326,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 1496.0,
+    "claims_per_explanation": 3.74
+  },
+  "claim_retention_rate": 0.5418326693227091,
+  "supported_claim_preservation": 0.9940944881889764,
+  "cost": {
+    "generation_cost_usd": 1.7646184999999996,
+    "cost_per_explanation_usd": 0.004411546249999999,
+    "input_tokens": 383923.0,
+    "output_tokens": 524219.0,
+    "total_tokens": 908142.0,
+    "tokens_per_explanation": 2270.355
+  }
+}

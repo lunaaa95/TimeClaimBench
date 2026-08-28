@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Model & Event source & Faith. & Unsup. & Partial & Claims/Expl. & Faith.+Repair & Retention & Sem. Pres. & Cost/Expl. \\
+\midrule
+GPT-4.1-mini & Extracted events & 0.706 & 0.082 & 0.212 & 9.71 & 0.992 & 0.881 & 1.000 & \$0.00140 \\
+GPT-4.1-mini & Gold events & 0.503 & 0.444 & 0.053 & 1.23 & 0.882 & 0.859 & 1.000 & \$0.00033 \\
+DeepSeek-V4-Flash & Extracted events & 0.746 & 0.072 & 0.181 & 8.88 & 0.988 & 0.905 & 1.000 & \$0.00044 \\
+DeepSeek-V4-Flash & Gold events & 0.556 & 0.421 & 0.023 & 1.09 & 0.886 & 0.924 & 1.000 & \$0.00015 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Gold-event versus extracted-event ablation on the 400-example synthetic test split. Extracted-event rows reuse the original event-grounded generations and recompute verification with the same parser used for the gold-event rows. Gold-event rows rerun event-grounded generation with synthetic gold events as the event list.}
+\label{tab:event-source-ablation}
+\end{table*}

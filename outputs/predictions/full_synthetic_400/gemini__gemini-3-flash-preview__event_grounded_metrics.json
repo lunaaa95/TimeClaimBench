@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/full_synthetic_400/gemini__gemini-3-flash-preview__event_grounded_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.635755258126195,
+    "unsupported_claim_rate": 0.09783301465901849,
+    "partial_support_rate": 0.2664117272147865,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 3138.0,
+    "claims_per_explanation": 7.845
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9967081199707388,
+    "unsupported_claim_rate": 0.0021945866861741038,
+    "partial_support_rate": 0.0010972933430870519,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 2734.0,
+    "claims_per_explanation": 6.835
+  },
+  "claim_retention_rate": 0.8712555768005099,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 2.2153404999999995,
+    "cost_per_explanation_usd": 0.0055383512499999985,
+    "input_tokens": 1107227.0,
+    "output_tokens": 553909.0,
+    "total_tokens": 1661136.0,
+    "tokens_per_explanation": 4152.84
+  }
+}

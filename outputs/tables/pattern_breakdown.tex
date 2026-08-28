@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Pattern & Direct Faith. & Event Faith. & $\Delta$ Faith. & Event Unsup. & Event Partial & Event Claims/Expl. \\
+\midrule
+Upward trend & 0.519 & 0.691 & +0.172 & 0.008 & 0.301 & 8.70 \\
+Downward trend & 0.493 & 0.685 & +0.192 & 0.023 & 0.292 & 8.54 \\
+Sharp rise & 0.552 & 0.714 & +0.162 & 0.047 & 0.240 & 8.96 \\
+Sharp drop & 0.452 & 0.759 & +0.307 & 0.059 & 0.183 & 8.74 \\
+Volatility shift & 0.332 & 0.558 & +0.227 & 0.254 & 0.187 & 8.40 \\
+Change point & 0.513 & 0.719 & +0.206 & 0.063 & 0.218 & 7.92 \\
+Seasonality & 0.385 & 0.658 & +0.273 & 0.214 & 0.128 & 10.19 \\
+Anomaly & 0.410 & 0.636 & +0.226 & 0.235 & 0.129 & 6.26 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Pattern-wise diagnostic breakdown on the 400-example synthetic test split, pooled over the five full-test models. Direct and event-grounded columns compare claim faithfulness before repair. The event-grounded columns also show remaining unsupported and partial-support rates, exposing which temporal phenomena remain difficult after grounding.}
+\label{tab:pattern-breakdown}
+\end{table*}

@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "failure_mode": "Unsupported pattern",
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "model_display": "GPT-4.1-mini",
+      "prompt": "direct",
+      "prompt_display": "Direct",
+      "series_id": "test_000003",
+      "gold_pattern": "upward_trend",
+      "claim_text": "Around the 50th point, there is a sharp and significant drop from approximately 109 down to near 100, indicating a major change point or anomaly.",
+      "claim_type": "anomaly",
+      "verifier_label": "unsupported",
+      "error_type": "pattern_confusion",
+      "support_interval": null,
+      "interpretation": "The model introduces an anomaly/change-point narrative not supported by the event graph."
+    },
+    {
+      "failure_mode": "Interval mislocalization",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "model_display": "DeepSeek-V4-Flash",
+      "prompt": "event_grounded",
+      "prompt_display": "Event-grounded",
+      "series_id": "test_000002",
+      "gold_pattern": "upward_trend",
+      "claim_text": "A moderate downward trend follows from index 20 to 60, overlapping with the later part of the upward trend and continuing after it.",
+      "claim_type": "upward_trend",
+      "verifier_label": "partial",
+      "error_type": "interval_mislocalization",
+      "support_interval": [
+        0,
+        40
+      ],
+      "interpretation": "The claim identifies the right phenomenon but grounds it to a narrower or shifted span."
+    },
+    {
+      "failure_mode": "Causal hallucination",
+      "provider": "openai",
+      "model": "gpt-4.1-mini",
+      "model_display": "GPT-4.1-mini",
+      "prompt": "cot",
+      "prompt_display": "CoT",
+      "series_id": "test_000032",
+      "gold_pattern": "upward_trend",
+      "claim_text": "The major temporal pattern is thus a mid-series growth phase culminating in a peak, abruptly interrupted by a significant drop, suggesting a possible external shock or regime change affecting the series.",
+      "claim_type": "local_peak",
+      "verifier_label": "unsupported",
+      "error_type": "pattern_confusion",
+      "support_interval": null,
+      "interpretation": "CoT turns a descriptive temporal change into an external-cause explanation."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering
+\small
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Slice & $N$ & Supp. (\%) & Part. (\%) & Unsup. (\%) & Macro-F1 \\
+\midrule
+All audited claims & 90 & 36.7 & 27.8 & 35.6 & 0.390 \\
+\midrule
+DeepSeek-V4-Flash & 45 & 42.2 & 28.9 & 28.9 & 0.403 \\
+GPT-4.1-mini & 45 & 31.1 & 26.7 & 42.2 & 0.367 \\
+\midrule
+Anomaly windows & 45 & 31.1 & 31.1 & 37.8 & 0.355 \\
+Normal windows & 45 & 42.2 & 24.4 & 33.3 & 0.418 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Single-annotator Real-NAB audit for 90 event-grounded claims. Supp., Part., and Unsup. are human-label percentages; Macro-F1 is reported on a 0--1 scale.}
+\label{tab:real-nab-human-audit}
+\end{table}

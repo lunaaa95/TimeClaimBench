@@ -1,0 +1,14 @@
+seed: 42
+input_path: data/synthetic/test.jsonl
+graph_path: data/processed/test_gold_graphs.jsonl
+output_dir: outputs/predictions/gold_events_400
+models:
+  - name: gpt-4.1-mini
+    provider: openai
+  - name: deepseek-v4-flash
+    provider: deepseek
+prompts:
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 5
+cost_config: configs/model_costs.yaml

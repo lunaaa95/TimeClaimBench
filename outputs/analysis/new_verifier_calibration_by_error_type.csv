@@ -1,0 +1,5 @@
+auto_error_type,n,final_supported_rate,final_partial_rate,final_unsupported_rate,non_supported_acceptance_rate
+interval_mislocalization,56,0.7857142857142857,0.16071428571428573,0.05357142857142857,0.21428571428571427
+pattern_hallucination,26,0.6538461538461539,0.0,0.34615384615384615,0.34615384615384615
+direction_error,10,1.0,0.0,0.0,0.0
+pattern_confusion,7,0.8571428571428571,0.14285714285714285,0.0,0.14285714285714285

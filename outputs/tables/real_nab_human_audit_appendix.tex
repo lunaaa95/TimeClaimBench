@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Verifier label & $N$ & Human supp. & Human part. & Human unsupp. & Exact & Gate-consistent \\
+\midrule
+Supported & 30 & 33.3 & 33.3 & 33.3 & 0.333 & 0.333 \\
+Partial & 30 & 36.7 & 36.7 & 26.7 & 0.367 & 0.633 \\
+Unsupported & 30 & 40.0 & 13.3 & 46.7 & 0.467 & 0.600 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Real-NAB human-audit calibration by automatic verifier label. The sample is intentionally balanced by verifier label, so these rates diagnose label reliability rather than corpus prevalence.}
+\label{tab:real-nab-human-audit-calibration}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+Human label & Verifier supported & Verifier partial & Verifier unsupported \\
+\midrule
+Supported & 10 & 11 & 12 \\
+Partial & 10 & 11 & 4 \\
+Unsupported & 10 & 8 & 14 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Three-way confusion matrix for the Real-NAB human audit. Rows are human labels and columns are automatic verifier labels.}
+\label{tab:real-nab-human-audit-confusion}
+\end{table}

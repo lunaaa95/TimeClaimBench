@@ -1,0 +1,8 @@
+models:
+  dummy:
+    provider: dummy
+    name: local-dummy
+  openai:
+    provider: openai
+    name: gpt-4o-mini
+    api_key_env: OPENAI_API_KEY

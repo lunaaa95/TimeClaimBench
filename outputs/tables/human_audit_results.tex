@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Comparison & N & Exact & Macro-F1 & $\kappa$ & Auto-Sup. Accept & Non-Sup. F1 \\
+\midrule
+Annotators (3-way) & 180 & 0.867 & -- & 0.680 & -- & -- \\
+Annotators (binary) & 180 & 0.883 & -- & 0.696 & -- & -- \\
+Verifier vs consensus gold & 156 & 0.410 & 0.353 & 0.090 & 0.807 & 0.333 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Calibrated human audit on the balanced 180-claim sample. Consensus gold uses the 156 claims with annotator agreement. Auto-Sup. Accept is the fraction of verifier-supported claims judged supported by humans; Non-Sup. F1 collapses \textsc{Partial} and \textsc{Unsupported} into a non-supported class. Additional metric definitions and the remaining 24 cases are summarized in Appendix~\ref{app:metrics} and Appendix~\ref{app:human-audit-details}.}
+\label{tab:human-audit}
+\end{table}
+

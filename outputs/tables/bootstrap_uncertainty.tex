@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Prompt & Faith. 95\% CI $\uparrow$ & Unsup. 95\% CI $\downarrow$ & $\Delta$Faith. (EG--Prompt) & $\Delta$Unsup. (EG--Prompt) \\
+\midrule
+Direct & 0.493 [0.485, 0.501] & 0.392 [0.383, 0.400] & 0.183 [0.172, 0.195] & -0.279 [-0.288, -0.270] \\
+CoT & 0.360 [0.355, 0.365] & 0.558 [0.552, 0.564] & 0.316 [0.306, 0.325] & -0.446 [-0.454, -0.438] \\
+Structured & 0.353 [0.344, 0.361] & 0.468 [0.458, 0.477] & 0.323 [0.311, 0.335] & -0.355 [-0.366, -0.345] \\
+Event-grounded & 0.676 [0.667, 0.684] & 0.113 [0.105, 0.120] & -- & -- \\
+\bottomrule
+\end{tabular}
+}
+\caption{Bootstrap uncertainty for prompt-level full synthetic results. We resample series within each fixed model run, compute claim-level rates per model, and average over the five models. Difference columns report paired event-grounded-minus-prompt comparisons; all three non-event-grounded comparisons have $p<0.001$ for both automatic claim faithfulness and verifier-unsupported rate. Negative $\Delta$Unsup. means fewer verifier-unsupported claims for event-grounded prompting.}
+\label{tab:bootstrap-uncertainty}
+\end{table}

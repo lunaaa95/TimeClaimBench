@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/event_source_ablation_400/deepseek__deepseek-v4-flash__extracted_events_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.7464788732394366,
+    "unsupported_claim_rate": 0.07211267605633803,
+    "partial_support_rate": 0.18140845070422534,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 3550.0,
+    "claims_per_explanation": 8.875
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.987546699875467,
+    "unsupported_claim_rate": 0.009962640099626401,
+    "partial_support_rate": 0.0024906600249066002,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 3212.0,
+    "claims_per_explanation": 8.03
+  },
+  "claim_retention_rate": 0.9047887323943662,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 0.17572772,
+    "cost_per_explanation_usd": 0.0004393193,
+    "input_tokens": 771208.0,
+    "output_tokens": 241995.0,
+    "total_tokens": 1013203.0,
+    "tokens_per_explanation": 2533.0075
+  }
+}

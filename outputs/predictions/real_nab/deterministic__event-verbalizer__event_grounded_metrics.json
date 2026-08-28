@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/real_nab/deterministic__event-verbalizer__event_grounded_generation.jsonl",
+  "n_records": 200,
+  "before_repair": {
+    "claim_faithfulness": 0.9608274647887324,
+    "unsupported_claim_rate": 0.015404929577464789,
+    "partial_support_rate": 0.023767605633802816,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 2272.0,
+    "claims_per_explanation": 11.36
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9608274647887324,
+    "unsupported_claim_rate": 0.015404929577464789,
+    "partial_support_rate": 0.023767605633802816,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 2272.0,
+    "claims_per_explanation": 11.36
+  },
+  "claim_retention_rate": 1.0,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 0.0,
+    "cost_per_explanation_usd": 0.0,
+    "input_tokens": 0.0,
+    "output_tokens": 0.0,
+    "total_tokens": 0.0,
+    "tokens_per_explanation": 0.0
+  }
+}

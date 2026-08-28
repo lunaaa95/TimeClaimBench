@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrr}
+\toprule
+Model & Event evidence & Faith. $\uparrow$ & $\Delta$Faith. & Unsup. $\downarrow$ & Partial & Claims/Expl. & Retention & Cost/Expl. \\
+\midrule
+DeepSeek-V4-Flash & Matched events & 0.715 & +0.000 & 0.084 & 0.201 & 8.51 & 0.893 & \$0.00043 \\
+DeepSeek-V4-Flash & Mismatched events & 0.253 & -0.462 & 0.294 & 0.453 & 8.85 & 0.571 & \$0.00047 \\
+GPT-4.1-mini & Matched events & 0.682 & +0.000 & 0.085 & 0.233 & 9.26 & 0.873 & \$0.00137 \\
+GPT-4.1-mini & Mismatched events & 0.288 & -0.394 & 0.302 & 0.410 & 9.30 & 0.589 & \$0.00134 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Mismatched event-list ablation on the 80-example stratified synthetic subset. Matched events use the correct extracted event list in the event-grounded prompt. Mismatched events keep the same raw series but supply events from another series, then verification is performed against the correct event graph. The large faithfulness drop shows that event-grounded prompting is sensitive to the supplied evidence rather than simply benefiting from prompt formatting.}
+\label{tab:mismatched-events}
+\end{table*}

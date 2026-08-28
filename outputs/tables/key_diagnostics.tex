@@ -1,0 +1,32 @@
+\begin{table*}[!tbp]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}p{0.18\textwidth}p{0.34\textwidth}p{0.40\textwidth}@{}}
+\toprule
+Diagnostic & Result & Interpretation \\
+\midrule
+Verifier ablation
+& Event graph outperforms type-only verifier: Macro-F1 0.733 vs. 0.456
+& Event type alone is insufficient; interval and graph checks are needed. \\
+
+Gold-event oracle
+& Gold events raise verifier Macro-F1 to 0.884
+& Some verifier errors reflect automatic event-extraction noise. \\
+
+Mismatched events
+& Faithfulness drops by 0.481 / 0.422 with wrong event lists
+& Event-grounded gains depend on correct evidence, not only formatting. \\
+
+Event verbalizer
+& Template verbalization reaches synthetic faithfulness 0.936
+& Direct event verbalization is an extractor-aligned upper reference. \\
+
+Real-NAB
+& Pos. hit 0.960; anom.-like precision 0.505; audit Macro-F1 0.390
+& Real anomaly windows are detectable, but claim-level support remains harder. \\
+\bottomrule
+\end{tabular}
+\caption{Compact diagnostic summary. Detailed verifier ablations, mismatched-event results, Real-NAB metrics, and Real-NAB audit results are reported in Tables~\ref{tab:verification}, \ref{tab:mismatched-events}, \ref{tab:real-nab-results}, and \ref{tab:real-nab-human-audit}.}
+\label{tab:key-diagnostics}
+\end{table*}

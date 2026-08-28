@@ -1,0 +1,9 @@
+supported_threshold: 0.75
+partial_threshold: 0.45
+weights:
+  type: 0.35
+  direction: 0.20
+  interval: 0.25
+  strength: 0.10
+  numeric: 0.10
+interval_iou_threshold: 0.5

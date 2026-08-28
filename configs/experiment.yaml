@@ -1,0 +1,16 @@
+seed: 42
+input_path: data/synthetic/test.jsonl
+graph_path: data/processed/test_graphs.jsonl
+output_dir: outputs/predictions
+models:
+  - name: gpt-4o-mini
+    provider: openai
+  - name: local-dummy
+    provider: dummy
+prompts:
+  - direct
+  - cot
+  - structured
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 2

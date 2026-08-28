@@ -1,0 +1,19 @@
+seed: 42
+input_path: data/synthetic/test_stratified_80.jsonl
+graph_path: data/processed/test_graphs.jsonl
+output_dir: outputs/predictions/requested_80
+models:
+  - name: deepseek-v4-flash
+    provider: deepseek
+  - name: gemini-3-flash-preview
+    provider: gemini
+  - name: claude-sonnet-4-5-20250929
+    provider: anthropic
+prompts:
+  - direct
+  - cot
+  - structured
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 2
+cost_config: configs/model_costs.yaml

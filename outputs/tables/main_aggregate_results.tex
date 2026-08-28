@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Prompt & Faith. $\uparrow$ & $\Delta$Faith. & Unsup. $\downarrow$ & $\Delta$Unsup. & Claims/Expl. & Ret. $\uparrow$ \\
+\midrule
+Direct & 0.493 & -- & 0.392 & -- & 10.27 & 0.530 \\
+CoT & 0.360 & -0.133 & 0.558 & +0.167 & 26.98 & 0.298 \\
+Structured & 0.353 & -0.140 & 0.468 & +0.076 & 6.82 & 0.477 \\
+Event-grounded & 0.676 & +0.183 & 0.113 & -0.279 & 8.46 & 0.850 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Main prompt-level synthetic results averaged over five LLMs on the 400-example test split. Faith. denotes automatic claim faithfulness, and Unsup. denotes verifier-unsupported rate under the extracted event graph. $\Delta$ columns are differences from direct prompting; the event-grounded differences are significant under paired bootstrap resampling ($p<0.001$), with 95\% CIs of [0.172, 0.195] for Faith. and [-0.288, -0.270] for Unsup. Retention is the fraction of claims preserved after verifier-guided repair.}
+\label{tab:main-aggregate-results}
+\end{table}

@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrr}
+\toprule
+Model & Windows & Faith. $\uparrow$ & Unsup. $\downarrow$ & Partial & Claims/Expl. & Pos. Hit $\uparrow$ & Explicit FA $\downarrow$ & Anom.-like Prec. $\uparrow$ & IoU $\uparrow$ & Center Dist. $\downarrow$ & Cost/Expl. $\downarrow$ \\
+\midrule
+DeepSeek-V4-Flash & 200 & 0.671 & 0.049 & 0.280 & 8.89 & 0.960 & 0.020 & 0.505 & 0.080 & 0.086 & \$0.00061 \\
+Event verbalizer & 200 & 0.961 & 0.015 & 0.024 & 11.36 & 0.960 & 0.560 & 0.505 & 0.080 & 0.067 & \$0.00000 \\
+GPT-4.1-mini & 200 & 0.617 & 0.049 & 0.334 & 10.98 & 0.960 & 0.010 & 0.505 & 0.080 & 0.084 & \$0.00194 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Real-NAB diagnostic results on fixed-length windows from the real subsets of the Numenta Anomaly Benchmark. Pos. Hit is the fraction of positive windows where a supported or partially supported anomaly-like claim overlaps the NAB anomaly window. Explicit FA is the false-anomaly rate on normal windows for explicit anomaly claims. Anom.-like Prec. is computed over windows containing any supported or partially supported anomaly-like claim, including anomaly, sharp rise/drop, and change-point claims; it is therefore a broad localization precision rather than ordinary explicit-anomaly precision. IoU measures interval overlap on positive examples, and Center Dist. is normalized center distance on positive examples. The deterministic event verbalizer is a no-API template baseline over the same extracted event graph.}
+\label{tab:real-nab-results}
+\end{table*}

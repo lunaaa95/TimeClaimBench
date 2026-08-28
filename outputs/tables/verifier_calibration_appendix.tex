@@ -1,0 +1,38 @@
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Verifier error type & N & Human sup. & Human part. & Human unsup. & Non-sup. accept \\
+\midrule
+interval\_mislocalization & 56 & 0.786 & 0.161 & 0.054 & 0.214 \\
+pattern\_hallucination & 26 & 0.654 & 0.000 & 0.346 & 0.346 \\
+direction\_error & 10 & 1.000 & 0.000 & 0.000 & 0.000 \\
+pattern\_confusion & 7 & 0.857 & 0.143 & 0.000 & 0.143 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Human calibration of verifier non-supported error types on the consensus-gold subset.}
+\label{tab:verifier-error-calibration}
+\end{table}
+
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrr}
+\toprule
+Score bin & N & Mean score & Human sup. & Human part. & Human unsup. \\
+\midrule
+\texttt{[0.00,0.25)} & 40 & 0.000 & 0.750 & 0.025 & 0.225 \\
+\texttt{[0.25,0.50)} & 1 & 0.480 & 1.000 & 0.000 & 0.000 \\
+\texttt{[0.50,0.75)} & 49 & 0.699 & 0.796 & 0.163 & 0.041 \\
+\texttt{[0.75,0.90)} & 16 & 0.806 & 0.812 & 0.125 & 0.062 \\
+\texttt{[0.90,1.00]} & 50 & 0.961 & 0.800 & 0.020 & 0.180 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Verifier score calibration on consensus-gold human-audit claims. Scores are produced by the rule verifier before human labels are used.}
+\label{tab:verifier-score-calibration}
+\end{table}

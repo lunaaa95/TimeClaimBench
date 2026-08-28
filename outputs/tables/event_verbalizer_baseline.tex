@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Dataset & N & Faith. $\uparrow$ & Unsup. $\downarrow$ & Partial & Claims/Expl. & Cost/Expl. \\
+\midrule
+Synthetic test & 400 & 0.936 & 0.040 & 0.024 & 11.35 & \$0.00000 \\
+Real-NAB & 200 & 0.961 & 0.015 & 0.024 & 11.36 & \$0.00000 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Deterministic event verbalizer baseline. The baseline converts the extracted event graph directly into template sentences and is evaluated by the same claim parser and verifier as LLM outputs. It is not an LLM generation method; it tests how much of the automatic score can be achieved by directly verbalizing the event extractor.}
+\label{tab:event-verbalizer}
+\end{table}

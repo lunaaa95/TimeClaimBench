@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}p{0.28\columnwidth}p{0.32\columnwidth}p{0.32\columnwidth}@{}}
+\toprule
+Label & Definition & Common boundary \\
+\midrule
+\textsc{Supported} & The claimed phenomenon, direction, and approximate interval are grounded in the series. & Approximate wording, rounded values, and small boundary shifts are acceptable. \\
+\textsc{Partial} & The main phenomenon is present, but an important component is weak or wrong. & Shifted interval, overstated strength, numeric error, or a mixed supported/unsupported sentence. \\
+\textsc{Unsupported} & The main claim is absent from the evidence or not observable from the series. & Pattern hallucination, wrong direction, wrong timing, or unsupported causal interpretation. \\
+\bottomrule
+\end{tabular}
+}
+\caption{Compact claim-level support labels used in \bench{}. Full error boundaries and examples are reported in Appendix Table~\ref{tab:error-taxonomy-full}.}
+\label{tab:error-taxonomy-compact}
+\end{table}

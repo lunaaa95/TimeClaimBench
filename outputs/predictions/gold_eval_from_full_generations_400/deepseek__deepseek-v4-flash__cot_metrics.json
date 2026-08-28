@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/gold_eval_from_full_generations_400/deepseek__deepseek-v4-flash__cot_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.10337520811260784,
+    "unsupported_claim_rate": 0.8622672922657787,
+    "partial_support_rate": 0.03435749962161344,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 6607.0,
+    "claims_per_explanation": 16.5175
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9695906432748538,
+    "unsupported_claim_rate": 0.0304093567251462,
+    "partial_support_rate": 0.0,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 855.0,
+    "claims_per_explanation": 2.1375
+  },
+  "claim_retention_rate": 0.1294082034206145,
+  "supported_claim_preservation": 0.9970717423133236,
+  "cost": {
+    "generation_cost_usd": 0.3524919999999999,
+    "cost_per_explanation_usd": 0.0008812299999999998,
+    "input_tokens": 215568.0,
+    "output_tokens": 1151116.0,
+    "total_tokens": 1366684.0,
+    "tokens_per_explanation": 3416.71
+  }
+}

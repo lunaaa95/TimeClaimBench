@@ -1,0 +1,14 @@
+seed: 42
+input_path: data/synthetic/test_stratified_80.jsonl
+graph_path: data/processed/test_stratified_80_mismatched_graphs.jsonl
+output_dir: outputs/predictions/mismatched_events_80
+models:
+  - name: gpt-4.1-mini
+    provider: openai
+  - name: deepseek-v4-flash
+    provider: deepseek
+prompts:
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 3
+cost_config: configs/model_costs.yaml

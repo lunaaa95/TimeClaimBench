@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/requested_80/deepseek__deepseek-v4-flash__cot_repaired.jsonl",
+  "n_records": 80,
+  "before_repair": {
+    "claim_faithfulness": 0.45707472178060415,
+    "unsupported_claim_rate": 0.43402225755166934,
+    "partial_support_rate": 0.10890302066772654,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 1258.0,
+    "claims_per_explanation": 15.725
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9702970297029703,
+    "unsupported_claim_rate": 0.013201320132013201,
+    "partial_support_rate": 0.0165016501650165,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 606.0,
+    "claims_per_explanation": 7.575
+  },
+  "claim_retention_rate": 0.48171701112877585,
+  "supported_claim_preservation": 0.9704347826086956,
+  "cost": {
+    "generation_cost_usd": 0.07237216,
+    "cost_per_explanation_usd": 0.000904652,
+    "input_tokens": 43108.0,
+    "output_tokens": 236918.0,
+    "total_tokens": 280026.0,
+    "tokens_per_explanation": 3500.325
+  }
+}

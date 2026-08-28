@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering
+\small
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrrrr}
+\toprule
+Setting & N & Thresholds & Exact $\uparrow$ & Macro-F1 $\uparrow$ & $\kappa$ $\uparrow$ & Non-sup. F1 $\uparrow$ \\
+\midrule
+Original fixed & 156 & sup=0.75,part=0.45,iou=0.50 & 0.410 & 0.353 & 0.090 & 0.333 \\
+CV calibrated & 156 & sup=0.80,part=0.55,iou=0.30 & 0.391 & 0.335 & 0.066 & 0.316 \\
+Best in-sample & 156 & sup=0.75,part=0.25,iou=0.30 & 0.417 & 0.357 & 0.094 & 0.336 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Verifier threshold calibration on the 156 consensus-gold human-audit claims. The original row uses the fixed thresholds from all main experiments. The cross-validated row selects support, partial, and interval-IoU thresholds on four folds and evaluates on the held-out fold, showing how much of the human-verifier gap is due to threshold conservatism rather than the event representation itself.}
+\label{tab:verifier-threshold-calibration}
+\end{table}

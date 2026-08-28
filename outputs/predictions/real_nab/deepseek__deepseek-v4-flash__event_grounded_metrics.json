@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/real_nab/deepseek__deepseek-v4-flash__event_grounded_repaired.jsonl",
+  "n_records": 200,
+  "before_repair": {
+    "claim_faithfulness": 0.670978627671541,
+    "unsupported_claim_rate": 0.049493813273340834,
+    "partial_support_rate": 0.2795275590551181,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 1778.0,
+    "claims_per_explanation": 8.89
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9858722358722358,
+    "unsupported_claim_rate": 0.0085995085995086,
+    "partial_support_rate": 0.005528255528255528,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 1628.0,
+    "claims_per_explanation": 8.14
+  },
+  "claim_retention_rate": 0.9156355455568054,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 0.12295388000000004,
+    "cost_per_explanation_usd": 0.0006147694000000002,
+    "input_tokens": 580030.0,
+    "output_tokens": 149106.0,
+    "total_tokens": 729136.0,
+    "tokens_per_explanation": 3645.68
+  }
+}

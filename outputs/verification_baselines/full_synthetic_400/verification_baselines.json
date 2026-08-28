@@ -1,0 +1,175 @@
+{
+  "reports": [
+    {
+      "macro_f1": 0.2222222222222222,
+      "supported_precision": 0.0,
+      "supported_recall": 0.0,
+      "supported_f1": 0.0,
+      "partial_precision": 0.0,
+      "partial_recall": 0.0,
+      "partial_f1": 0.0,
+      "unsupported_precision": 0.5,
+      "unsupported_recall": 1.0,
+      "unsupported_f1": 0.6666666666666666,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "unsupported": 1600
+      },
+      "name": "Majority unsupported",
+      "support_iou": 0.0
+    },
+    {
+      "macro_f1": 0.45635141172752736,
+      "supported_precision": 0.3816793893129771,
+      "supported_recall": 1.0,
+      "supported_f1": 0.5524861878453039,
+      "partial_precision": 0.0,
+      "partial_recall": 0.0,
+      "partial_f1": 0.0,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.69,
+      "unsupported_f1": 0.8165680473372781,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 1048,
+        "unsupported": 552
+      },
+      "name": "Type-only",
+      "support_iou": 0.5312569990303646
+    },
+    {
+      "macro_f1": 0.45574303687041723,
+      "supported_precision": 0.381453154875717,
+      "supported_recall": 0.9975,
+      "supported_f1": 0.5518672199170125,
+      "partial_precision": 0.0,
+      "partial_recall": 0.0,
+      "partial_f1": 0.0,
+      "unsupported_precision": 0.9963898916967509,
+      "unsupported_recall": 0.69,
+      "unsupported_f1": 0.8153618906942393,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 1046,
+        "unsupported": 554
+      },
+      "name": "Type+direction",
+      "support_iou": 0.5312569990303646
+    },
+    {
+      "macro_f1": 0.7333429840809593,
+      "supported_precision": 0.701067615658363,
+      "supported_recall": 0.985,
+      "supported_f1": 0.8191268191268191,
+      "partial_precision": 0.51440329218107,
+      "partial_recall": 0.625,
+      "partial_f1": 0.5643340857787811,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.69,
+      "unsupported_f1": 0.8165680473372781,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 562,
+        "partial": 486,
+        "unsupported": 552
+      },
+      "name": "Type+interval",
+      "support_iou": 0.6037476299993529
+    },
+    {
+      "macro_f1": 0.4578034638774667,
+      "supported_precision": 0.381453154875717,
+      "supported_recall": 0.9975,
+      "supported_f1": 0.5518672199170125,
+      "partial_precision": 0.5,
+      "partial_recall": 0.0025,
+      "partial_f1": 0.0049751243781094535,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.69,
+      "unsupported_f1": 0.8165680473372781,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 1046,
+        "unsupported": 552,
+        "partial": 2
+      },
+      "name": "Event graph (no interval)",
+      "support_iou": 0.5372862835170755
+    },
+    {
+      "macro_f1": 0.7333429840809593,
+      "supported_precision": 0.701067615658363,
+      "supported_recall": 0.985,
+      "supported_f1": 0.8191268191268191,
+      "partial_precision": 0.51440329218107,
+      "partial_recall": 0.625,
+      "partial_f1": 0.5643340857787811,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.69,
+      "unsupported_f1": 0.8165680473372781,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 562,
+        "partial": 486,
+        "unsupported": 552
+      },
+      "name": "Event graph",
+      "support_iou": 0.60073924967828
+    },
+    {
+      "macro_f1": 0.8842024848216798,
+      "supported_precision": 0.7476635514018691,
+      "supported_recall": 1.0,
+      "supported_f1": 0.8556149732620321,
+      "partial_precision": 1.0,
+      "partial_recall": 0.6625,
+      "partial_f1": 0.7969924812030075,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 1.0,
+      "unsupported_f1": 1.0,
+      "n": 1600.0,
+      "label_distribution_true": {
+        "supported": 400,
+        "partial": 400,
+        "unsupported": 800
+      },
+      "label_distribution_pred": {
+        "supported": 535,
+        "unsupported": 800,
+        "partial": 265
+      },
+      "name": "Gold-event oracle",
+      "support_iou": 0.6505792769592634
+    }
+  ]
+}

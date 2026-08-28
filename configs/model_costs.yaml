@@ -1,0 +1,81 @@
+pricing_date: "2026-05-12"
+unit: "USD per 1M tokens"
+notes:
+  - "Prices change over time; update this file from official provider pricing pages before final experiments."
+  - "DeepSeek input price uses cache-miss pricing for conservative estimates."
+models:
+  gpt-5.4-mini:
+    provider: openai
+    input_per_million: 0.75
+    output_per_million: 4.50
+    source: "https://platform.openai.com/docs/pricing"
+  gpt-5-mini:
+    provider: openai
+    input_per_million: 0.25
+    output_per_million: 2.00
+    source: "legacy config; refresh if used"
+  gpt-4.1-mini:
+    provider: openai
+    input_per_million: 0.40
+    output_per_million: 1.60
+    source: "https://platform.openai.com/docs/models/gpt-4.1-mini"
+  gpt-4o-mini:
+    provider: openai
+    input_per_million: 0.15
+    output_per_million: 0.60
+    source: "https://platform.openai.com/docs/pricing"
+  claude-haiku-4-5-20251001:
+    provider: anthropic
+    input_per_million: 1.00
+    output_per_million: 5.00
+    source: "https://www.anthropic.com/pricing"
+  claude-haiku-4-5:
+    provider: anthropic
+    input_per_million: 1.00
+    output_per_million: 5.00
+    source: "https://www.anthropic.com/pricing"
+  claude-3-5-haiku-latest:
+    provider: anthropic
+    input_per_million: 0.80
+    output_per_million: 4.00
+    source: "legacy config; refresh if used"
+  claude-sonnet-4-20250514:
+    provider: anthropic
+    input_per_million: 3.00
+    output_per_million: 15.00
+    source: "https://www.anthropic.com/pricing"
+  claude-sonnet-4-5-20250929:
+    provider: anthropic
+    input_per_million: 3.00
+    output_per_million: 15.00
+    source: "https://docs.claude.com/en/docs/about-claude/models/overview"
+  deepseek-v4-flash:
+    provider: deepseek
+    input_per_million: 0.14
+    output_per_million: 0.28
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+  deepseek-chat:
+    provider: deepseek
+    input_per_million: 0.14
+    output_per_million: 0.28
+    source: "https://api-docs.deepseek.com/quick_start/pricing"
+  gemini-2.5-flash-lite:
+    provider: gemini
+    input_per_million: 0.05
+    output_per_million: 0.20
+    source: "https://ai.google.dev/gemini-api/docs/pricing"
+  gemini-2.5-flash:
+    provider: gemini
+    input_per_million: 0.15
+    output_per_million: 1.25
+    source: "https://ai.google.dev/gemini-api/docs/pricing"
+  gemini-3-flash-preview:
+    provider: gemini
+    input_per_million: 0.50
+    output_per_million: 3.00
+    source: "https://ai.google.dev/pricing"
+  gemini-2.5-pro:
+    provider: gemini
+    input_per_million: 1.25
+    output_per_million: 10.00
+    source: "https://ai.google.dev/gemini-api/docs/pricing"

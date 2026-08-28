@@ -1,0 +1,14 @@
+seed: 20260518
+input_path: data/real/nab_windows.jsonl
+graph_path: data/processed/nab_windows_graphs.jsonl
+output_dir: outputs/predictions/real_nab
+models:
+  - name: gpt-4.1-mini
+    provider: openai
+  - name: deepseek-v4-flash
+    provider: deepseek
+prompts:
+  - event_grounded
+cache_dir: outputs/cache
+max_retries: 5
+cost_config: configs/model_costs.yaml

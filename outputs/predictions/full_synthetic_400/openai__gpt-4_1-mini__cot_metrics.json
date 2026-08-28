@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/full_synthetic_400/openai__gpt-4_1-mini__cot_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.35099555701826557,
+    "unsupported_claim_rate": 0.5516702320223794,
+    "partial_support_rate": 0.09733421095935495,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 12154.0,
+    "claims_per_explanation": 30.385
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9673671199011125,
+    "unsupported_claim_rate": 0.017552533992583438,
+    "partial_support_rate": 0.01508034610630408,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 4045.0,
+    "claims_per_explanation": 10.1125
+  },
+  "claim_retention_rate": 0.3328122428830015,
+  "supported_claim_preservation": 0.9650726676043132,
+  "cost": {
+    "generation_cost_usd": 0.42064159999999984,
+    "cost_per_explanation_usd": 0.0010516039999999996,
+    "input_tokens": 216368.0,
+    "output_tokens": 208809.0,
+    "total_tokens": 425177.0,
+    "tokens_per_explanation": 1062.9425
+  }
+}

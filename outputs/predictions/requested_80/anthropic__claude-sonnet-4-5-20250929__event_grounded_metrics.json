@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/requested_80/anthropic__claude-sonnet-4-5-20250929__event_grounded_repaired.jsonl",
+  "n_records": 80,
+  "before_repair": {
+    "claim_faithfulness": 0.6775244299674267,
+    "unsupported_claim_rate": 0.1465798045602606,
+    "partial_support_rate": 0.1758957654723127,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 614.0,
+    "claims_per_explanation": 7.675
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.9841584158415841,
+    "unsupported_claim_rate": 0.005940594059405941,
+    "partial_support_rate": 0.009900990099009901,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 505.0,
+    "claims_per_explanation": 6.3125
+  },
+  "claim_retention_rate": 0.8224755700325733,
+  "supported_claim_preservation": 0.9903846153846154,
+  "cost": {
+    "generation_cost_usd": 0.879519,
+    "cost_per_explanation_usd": 0.0109939875,
+    "input_tokens": 152013.0,
+    "output_tokens": 28232.0,
+    "total_tokens": 180245.0,
+    "tokens_per_explanation": 2253.0625
+  }
+}

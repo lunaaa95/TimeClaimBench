@@ -1,0 +1,19 @@
+\begin{table*}[!tbp]
+\centering
+\small
+\begin{tabular}{@{}p{0.18\textwidth}p{0.24\textwidth}p{0.24\textwidth}p{0.25\textwidth}@{}}
+\toprule
+Label / error type & Definition & Typical example & Boundary rule \\
+\midrule
+\textsc{Supported} & The main temporal phenomenon, direction, and approximate interval are grounded in the series. & ``A sharp rise occurs around indices 20--25.'' & Exact wording need not match the event name if the phenomenon and interval are compatible. \\
+\textsc{Partial}: interval shift & The right phenomenon is present but localized to a shifted, too broad, or too narrow interval. & ``The increase lasts through the final third'' when the event ends near the middle. & Use \textsc{Partial} when the claim would become supported after interval correction. \\
+\textsc{Partial}: overstatement & A grounded pattern is described with excessive strength, magnitude, duration, or frequency. & ``A strong trend'' for a weak but detectable trend. & Use \textsc{Partial} when the phenomenon exists but a salient attribute is wrong. \\
+\textsc{Partial}: mixed claim & One part of a sentence is grounded, but another part adds an unsupported detail. & ``The series rises around t=20 because of an external shock.'' & Use \textsc{Partial} when the supported and unsupported parts are inseparable in the same claim. \\
+\textsc{Unsupported}: pattern hallucination & The explanation introduces a temporal pattern absent from the evidence. & Claiming seasonality or a change point when no compatible event is detected. & Use \textsc{Unsupported} when no compatible event can ground the main claim. \\
+\textsc{Unsupported}: wrong direction or timing & The claimed event has the wrong sign or occurs in a region where no compatible event is visible. & Claiming a sharp drop where the evidence shows a sharp rise. & Direction-incompatible atomic claims are gated to \textsc{Unsupported}; use \textsc{Partial} only for inseparable mixed claims with a grounded subclaim. \\
+\textsc{Unsupported}: causal claim & The explanation infers an external cause not observable from the univariate series. & ``The drop is caused by an external shock.'' & Causal language is unsupported unless causal evidence is explicitly provided. \\
+\bottomrule
+\end{tabular}
+\caption{Full claim-level support taxonomy and boundary rules. The compact version in Table~\ref{tab:error-taxonomy-compact} defines the three labels used in the main text; this table expands the common partial and unsupported error modes used in annotation and diagnostic analysis.}
+\label{tab:error-taxonomy-full}
+\end{table*}

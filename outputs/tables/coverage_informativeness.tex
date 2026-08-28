@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Prompt & Runs & Faith. $\uparrow$ & Unsup. $\downarrow$ & Claims/Expl. & Top-5 Sup. Cov. $\uparrow$ & Top-5 Grounded Cov. $\uparrow$ & Gold Sup. Cov. $\uparrow$ & Gold Grounded Cov. $\uparrow$ \\
+\midrule
+Direct & 2000 & 0.459 & 0.439 & 10.27 & 0.243 & 0.300 & 0.721 & 0.797 \\
+CoT & 2000 & 0.354 & 0.567 & 26.98 & 0.337 & 0.391 & 0.811 & 0.868 \\
+Structured & 2000 & 0.347 & 0.474 & 6.82 & 0.176 & 0.250 & 0.532 & 0.654 \\
+Event-grounded & 2000 & 0.679 & 0.111 & 8.46 & 0.368 & 0.421 & 0.611 & 0.675 \\
+Event verbalizer & 400 & 0.936 & 0.040 & 11.35 & 0.832 & 0.832 & 0.765 & 0.767 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Coverage and informativeness diagnostics on the 400-example synthetic test set. Top-5 coverage is the mean fraction of the five highest-scoring extracted events that are mentioned by supported claims, or by supported-or-partial claims for grounded coverage. Gold coverage is the mean fraction of synthetic gold events covered by a compatible claim with interval IoU at least 0.3. The deterministic event verbalizer is included as a no-API upper reference for event coverage.}
+\label{tab:coverage-informativeness}
+\end{table*}

@@ -1,0 +1,30 @@
+{
+  "input": "outputs/predictions/gold_events_400/deepseek__deepseek-v4-flash__event_grounded_repaired.jsonl",
+  "n_records": 400,
+  "before_repair": {
+    "claim_faithfulness": 0.5563218390804597,
+    "unsupported_claim_rate": 0.4206896551724138,
+    "partial_support_rate": 0.022988505747126436,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 435.0,
+    "claims_per_explanation": 1.0875
+  },
+  "after_repair": {
+    "claim_faithfulness": 0.8855721393034826,
+    "unsupported_claim_rate": 0.11442786069651742,
+    "partial_support_rate": 0.0,
+    "chronology_violation_rate": 0.0,
+    "n_claims": 402.0,
+    "claims_per_explanation": 1.005
+  },
+  "claim_retention_rate": 0.9241379310344827,
+  "supported_claim_preservation": 1.0,
+  "cost": {
+    "generation_cost_usd": 0.05996088000000003,
+    "cost_per_explanation_usd": 0.00014990220000000008,
+    "input_tokens": 254682.0,
+    "output_tokens": 86805.0,
+    "total_tokens": 341487.0,
+    "tokens_per_explanation": 853.7175
+  }
+}
